@@ -1,0 +1,65 @@
+{
+  "name": "circuitrocks",
+  "title": "Circuitrocks Alora ISP4520",
+  "description": "Circuitrocks is a general distributor of open-source hardware in the Philippines. We were founded in 2015, located in Metro Manila, Philippines. Your source of electronic prototyping and open source hardware.",
+  "url": "https://circuit.rocks/",
+  "homepage": "https://circuit.rocks/",
+  "license": "GNU Lesser General Public License",
+  "engines": {
+    "platformio": "<5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/beegee-tokyo/Circuitrocks_ISP4520_Arduino"
+  },
+  "version": "0.1.1",
+  "packageRepositories": [
+    "https://beegee-tokyo.github.io/package_circuitrocks_index.json",
+	"https://beegee-tokyo.github.io/manifest.json",
+	{
+		"framework-arduinocircuitrocksisp4520": [
+        {
+          "url": "https://github.com/beegee-tokyo/Circuitrocks_ISP4520_Arduino/archive/0.1.1.tar.gz",
+          "sha1": "F1516BD6EC4254E77DBDAD9D9E1137F198B96A45",
+          "version": "0.1.1",
+          "system": "*"
+        }
+	  ]
+	}
+  ],
+  "frameworks": {
+    "arduino": {
+      "package": "framework-arduinocircuitrocksisp4520",
+      "script": "builder/frameworks/arduino.py"
+    }
+  },
+  "packages": {
+    "toolchain-gccarmnoneeabi": {
+      "type": "toolchain",
+      "version": ">=1.60301.0,<1.80000.0"
+    },
+    "framework-arduinocircuitrocksisp4520": {
+      "type": "framework",
+      "optional": true,
+      "version": "~0.1.1"
+    },
+    "tool-sreccat": {
+      "version": "~1.164.0"
+    },
+    "tool-openocd": {
+      "type": "uploader",
+      "optional": true,
+      "version": "~2.1000.0"
+    },
+    "tool-nrfjprog": {
+      "type": "uploader",
+      "optional": true,
+      "version": "~1.90702.0"
+    },
+    "tool-jlink": {
+      "type": "uploader",
+      "optional": true,
+      "version": "^1.63208.0"
+    }
+  }
+}
